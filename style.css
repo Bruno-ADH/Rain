@@ -1,0 +1,45 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100dvh;
+}
+
+body{
+    background-color: #0D343A;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d343a), to(#000000));
+    background-image: linear-gradient(to bottom, #0d343a, #000000);
+    overflow: hidden;
+}
+
+.drop{
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d343a), to(#ffffff99));
+    background-image: linear-gradient(to bottom, #0d343a, #ffffff99);
+    width: 1px;
+    height: 89px;
+    position: absolute;
+    bottom: 200px;
+    animation: fall .63s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        margin-top: 900px;
+    }
+}
+
+#flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.1s;
+}
